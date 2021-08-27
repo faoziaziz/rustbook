@@ -1,0 +1,113 @@
+% Created 2021-08-27 Jum 21:13
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Aziz Faozi}
+\date{\today}
+\title{Pemrograman Rust}
+\hypersetup{
+ pdfauthor={Aziz Faozi},
+ pdftitle={Pemrograman Rust},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Abstrak}
+\label{sec:orge747198}
+Buku ini dibuat sebagai catatan untuk rust. Rust katanya sangat bagus untuk 
+system engineer, buat saya yang masih junior dalam System Engineer mempelajari
+pemrograman ini menjadi cukup menarik.
+
+\section{Install Rust}
+\label{sec:org4297dec}
+\subsection{Pemasangan Rust pada Linux}
+\label{sec:orgfda4baf}
+\begin{verbatim}
+curl https://sh.rustup.rs -sSf | sh
+source $HOME/.cargo/env
+export PATH="$HOME/.cargo/bin:$PATH"
+\end{verbatim}
+\subsection{Update Rust}
+\label{sec:orgf886c82}
+\begin{verbatim}
+rustup update
+\end{verbatim}
+\subsection{Uninstall Rust}
+\label{sec:org2fb48f9}
+\begin{verbatim}
+rustup self uninstall
+\end{verbatim}
+
+\subsection{Check Version}
+\label{sec:orgf5b7373}
+\begin{verbatim}
+rustc --version
+\end{verbatim}
+\subsection{Test Program}
+\label{sec:org9ac4130}
+\begin{verbatim}
+mkdir 1_Hello_World
+cd 1_Hello_World/
+\end{verbatim}
+Buatlah sebuah code untuk untuk melakukan test program dengan nama
+\begin{verbatim}
+main.rs
+\end{verbatim}
+Tulis kode berikut
+\begin{verbatim}
+fn main() {
+println!("Hello, world!");
+}
+\end{verbatim}
+Kemudian kompile dengan perintah berikut
+\begin{verbatim}
+rustc main.rs
+\end{verbatim}
+jalankan program dengan perintah berikut
+\begin{verbatim}
+./main
+\end{verbatim}
+
+\subsection{Cargo}
+\label{sec:org4b7d541}
+\subsubsection{Inisiasi Project}
+\label{sec:org37593b1}
+Saat kita menginstall rust biasaya akan ada bawaan cargo.
+
+\begin{verbatim}
+cargo new hello_cargo --bin
+cd hello_cargo
+\end{verbatim}
+untuk build
+\begin{verbatim}
+cargo build
+\end{verbatim}
+setelah menjalakan cargo build, proses ini akan menghasilkan
+file. Dengan menjalankan perintah dibawah ini kita akan menjalankan program
+\begin{verbatim}
+./target/debug/hello_cargo 
+\end{verbatim}
+alternatif dengan langsung mengakses file binarynya kita bisa menggunakan
+perintah dibawah ini untuk langsung menjalanakan programmnya.
+\begin{verbatim}
+cargo run
+\end{verbatim}
+\end{document}

@@ -49,4 +49,31 @@ jalankan program dengan perintah berikut
 ./main
 #+END_SRC
 
+** Cargo
+*** Inisiasi Project
+Saat kita menginstall rust biasaya akan ada bawaan cargo.
 
+#+BEGIN_SRC bash
+cargo new hello_cargo --bin
+cd hello_cargo
+#+END_SRC
+untuk build
+#+BEGIN_SRC bash
+cargo build
+#+END_SRC
+setelah menjalakan cargo build, proses ini akan menghasilkan
+file. Dengan menjalankan perintah dibawah ini kita akan menjalankan program
+#+BEGIN_SRC bash
+./target/debug/hello_cargo 
+#+END_SRC
+alternatif dengan langsung mengakses file binarynya kita bisa menggunakan
+perintah dibawah ini untuk langsung menjalanakan programmnya.
+#+BEGIN_SRC bash
+cargo run
+#+END_SRC
+
+* Syntax Dasar
+** Output
+** Input
+** Conditional
+** Iterasi
